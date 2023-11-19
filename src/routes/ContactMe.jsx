@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './ContactMe.css'; // Import your CSS file for ContactMe styling
 
 const ContactMe = () => {
   const [name, setName] = useState('');
@@ -7,15 +8,21 @@ const ContactMe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-   
+
+    // Perform your desired action with the form data
     console.log('Form submitted:', { name, email, message });
+
+    // Clear the form fields after submission
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
-    <div>
+    <div className="contact-container">
       <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -25,7 +32,7 @@ const ContactMe = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -35,7 +42,7 @@ const ContactMe = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"

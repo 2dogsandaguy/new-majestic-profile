@@ -1,24 +1,43 @@
-
+import './WorkExp.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const WorkExp = () => {
   return (
-    <div>
-      <h2>Robert Frisco</h2>
-      <p>Service Technician | Team Leader | Fabricator</p>
+    <div className="container">
+      <h2 className="text-center mt-4"> Robert Frisco</h2>
+      <p className="text-center">Service Technician | Team Leader |
+        Fabricator
+      </p>
+      
+      <div className="contact-info mt-4">
+      <h3 >Contact:</h3>
+      <p>91 Oak St, Bayonne, NJ | (551) 221-5702 |
+        Neverclear@ymail.com</p>
+      </div>
 
-      <h3>Contact:</h3>
-      <p>91 Oak St, Bayonne, NJ | (551) 221-5702 | Neverclear@ymail.com</p>
-
+      <div className="objective mt-4">
       <h3>Objective:</h3>
       <p>
-        Experienced and versatile professional with a proven track record in the installation, repair, and fabrication of material handling devices and cranes. Adept at leading teams for large-scale projects. Possesses strong communication and problem-solving skills.
+        Experienced and versatile professional with 
+        a proven track record in the installation, 
+        repair, and fabrication of material handling
+        devices and cranes. Adept at leading teams for
+        large-scale projects. Possesses strong communication
+        and problem-solving skills.
       </p>
-
+      </div>
+      
+      <div className="summary mt-4">
       <h3>Summary:</h3>
       <p>
-        Dedicated and hardworking professional with a passion for delivering exceptional results. Thrives in challenging environments and embraces opportunities to learn and master new skills. Adept at collaborating with teams to achieve project success.
+        Dedicated and hardworking professional with a passion 
+        for delivering exceptional results. Thrives in challenging 
+        environments and embraces opportunities to learn and master 
+        new skills. Adept at collaborating with teams to achieve project success.
       </p>
-
+      </div>
+      
+      <div className="experience mt-4">
       <h3>Experience:</h3>
       <h4>PCS Cranes | Team Leader</h4>
       <p>Various Locations, Tri-State Area<br />2019 - Present</p>
@@ -29,7 +48,9 @@ const WorkExp = () => {
         <li>Executed offshore work on a windmill project, showcasing adaptability and commitment.</li>
         <li>Extensive travel across the Tri-State Area for project assignments.</li>
       </ul>
+      </div>
 
+      <div className="experience mt-4">
       <h4>Maximum Material Handling | Service Technician</h4>
       <p>Parsippany, NJ<br />2017-2019</p>
       <ul>
@@ -37,7 +58,9 @@ const WorkExp = () => {
         <li>Excelled as a fabricator with a keen ability to interpret blueprints.</li>
         <li>Specialized in crane troubleshooting.</li>
       </ul>
+      </div>
 
+      <div className="experience mt-4">
       <h4>Electrolift | Electrical Panel Wirer</h4>
       <p>Clifton, NJ<br />2009-2017</p>
       <ul>
@@ -45,7 +68,9 @@ const WorkExp = () => {
         <li>Managed inventory levels and ensured timely product deliveries.</li>
         <li>Assembled overhead cranes with precision.</li>
       </ul>
+      </div>
 
+      <div className="skills">
       <h3>Skills:</h3>
       <ul>
         <li>Project Leadership</li>
@@ -55,12 +80,17 @@ const WorkExp = () => {
         <li>Team Collaboration</li>
         <li>Technical Expertise in Electrical Systems and Welding</li>
         <li>GWO Certified</li>
-      </ul>
+      </ul> 
+      </div>
 
+      <div className="education mt-4">
       <h3>Education:</h3>
       <p>HoHoKus School of Trade & Technical Sciences, Patterson, NJ<br />Electrician Apprenticeship | Perfect Attendance</p>
+      </div>
 
-      <h3>References:</h3>
+      <div className="references mt-4">
+      <h3>References: Upon Request </h3>
+      </div>
       
     </div>
   );

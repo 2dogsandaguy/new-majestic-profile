@@ -1,0 +1,68 @@
+/* WorkExp.css */
+
+/* Add your custom styles here */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  /* Style for different sections (contact-info, objective, summary, experience, etc.) */
+  
+  .contact-info h3,
+  .objective h3,
+  .summary h3,
+  .experience h3 {
+    color: #129ada;
+    font-size: 24px;
+  }
+  
+  .experience h4 {
+    color: #9b1313;
+    font-size: 20px;
+  }
+  
+  .experience p,
+  .experience li {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+.skills,
+.education,
+.references {
+  margin-top: 2rem;
+}
+
+.skills h3,
+.education h3,
+.references h3 {
+  color: #129ada;
+  font-size: 24px;
+}
+
+.skills ul,
+.skills li,
+.education p,
+.references p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.skills li,
+.education p,
+.references p {
+  margin-bottom: 0.5rem;
+}
+
+
+
+  

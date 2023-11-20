@@ -1,6 +1,6 @@
 import './MyWork.css';
 
-import firstProject from '../assets/images/first-project.png';
+import firstProject from '../assets/images/first-Project.png';
 import QuizApp from '../assets/images/quizApp.png';
 import Project2 from '../assets/images/project2.png';
 import StudyTips from '../assets/images/studyTips.png';
@@ -41,6 +41,7 @@ const projects = [
 
 const MyWork = () => {
   return (
+    
     <section className="flex-row">
       <h2 id="My-Work">My Work</h2>
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './ContactMe.css'; // Import your CSS file for ContactMe styling
-
+import mailPhoto from "../assets/images/email.jpg"
 const ContactMe = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,6 +19,21 @@ const ContactMe = () => {
   };
 
   return (
+    <div
+      className="create-container"
+      style={{
+        backgroundImage: `url(${mailPhoto})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        /* overflow: 'hidden', */
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        Height: '100vh',
+        position: 'relative',
+        overflowY: 'auto',
+      }}
+    >
     <div className="contact-container">
       <h2>Contact Me</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -53,6 +68,7 @@ const ContactMe = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
+    </div>
     </div>
   );
 };

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-12 custom-footer text-center">
             <p>&copy; 2023 Robert Frisco</p>
-            <img className="img-fluid anime-image" src={animeImage} alt="Anime" />
+            <img className="img-fluid anime-image" style={{ width: '50%' }}src={animeImage} alt="Anime" />
             
           </div>
         </div>

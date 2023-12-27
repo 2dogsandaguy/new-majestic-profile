@@ -5,7 +5,7 @@ import QuizApp from '../assets/images/quizApp.png';
 import Project2 from '../assets/images/project2.png';
 import StudyTips from '../assets/images/studyTips.png';
 import DayPlanner from '../assets/images/dayPlanner.png';
-
+import matrix from '../assets/images/giphy-matrix.gif';
 const projects = [
   {
     image: firstProject,
@@ -41,7 +41,21 @@ const projects = [
 
 const MyWork = () => {
   return (
-    
+    <div
+      className="create-container"
+      style={{
+        backgroundImage: `url(${matrix})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        /* overflow: 'hidden', */
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        Height: '100vh',
+        position: 'relative',
+        overflowY: 'auto',
+      }}
+    >
     <section className="flex-row">
       <h2 id="My-Work">My Work</h2>
 
@@ -60,7 +74,7 @@ const MyWork = () => {
           ))}
         </section>
       </section>
-    </section>
+    </section></div>
   );
 };
 

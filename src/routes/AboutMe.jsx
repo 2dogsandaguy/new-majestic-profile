@@ -1,7 +1,9 @@
+
 import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
+    
     <div id="background" className="background-image">
       <div className="text-box">
         <section className="flex-row about-me-section">

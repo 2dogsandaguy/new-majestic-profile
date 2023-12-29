@@ -26,10 +26,19 @@ const WorkExp = () => {
 
       <section className="contact-info mt-4">
         <h3>Contact:</h3>
-        <p>Phone #:<a href="tel:+15512215702">+1 551 221 5702</a>  | Email: <a href="mailto:neverclear@ymail.com">neverclear@ymail.com</a> | Location: Bayonne, NJ 07002</p>
-        <p> <a href="https://www.linkedin.com/in/robert-frisco-b287272a6/" target="_blank" rel="noopener noreferrer">My LinkedIn</a>  | 
-        <a href="https://frabjous-frangipane-e462c2.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</a> |
-        <a href="https://github.com/2dogsandaguy" target="_blank" rel="noopener noreferrer">GitHub</a> 
+        <p>Phone #: <a href="tel:+15512215702">+1 551 221 5702</a>  | Email: <a href="mailto:neverclear@ymail.com">neverclear@ymail.com</a> | Location: Bayonne, NJ 07002</p>
+        <p> 
+          <a href="https://www.linkedin.com/in/robert-frisco-b287272a6/" 
+          target="_blank" 
+          rel="noopener noreferrer">
+          My LinkedIn
+          </a> | <a href="https://frabjous-frangipane-e462c2.netlify.app/" 
+          target="_blank" 
+          rel="noopener noreferrer">
+          Portfolio</a> | <a href="https://github.com/2dogsandaguy" 
+          target="_blank" 
+          rel="noopener noreferrer">
+            GitHub</a> 
         </p>
       </section> 
 

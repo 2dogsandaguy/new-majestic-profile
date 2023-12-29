@@ -47,7 +47,7 @@ const MyWork = () => {
         backgroundImage: `url(${matrix})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        /* overflow: 'hidden', */
+        
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

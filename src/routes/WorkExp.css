@@ -1,6 +1,11 @@
 /* WorkExp.css */
-
-/* Add your custom styles here */
+a{
+  color: green;
+}
+.text-white {
+  color: aliceblue;
+  font-size: 20px;
+}
 
 .container {
     max-width: 800px;
@@ -15,11 +20,17 @@
     margin-top: 1.5rem;
   }
   
-  /* Style for different sections (contact-info, objective, summary, experience, etc.) */
+
   
-  .contact-info h3,
+  .contact-info h3{
+  color: #9b1313;
+  }
+  
+  .summary h3{
+  color: purple;
+
+  }
   .objective h3,
-  .summary h3,
   .experience h3 {
     color: #129ada;
     font-size: 24px;
@@ -63,6 +74,12 @@
   margin-bottom: 0.5rem;
 }
 
-
+.work-experience h3,h4 {
+ color: yellow;
+}
+.links h3,
+.additional-info h3{
+  color: hotpink;
+}
 
   

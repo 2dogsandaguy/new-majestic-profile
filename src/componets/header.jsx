@@ -1,5 +1,7 @@
 import farmPhoto from '../assets/images/me-on-farm.jpg';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Header = () => {
   return (
@@ -13,13 +15,14 @@ const Header = () => {
                   style={{ textDecoration: 'none', 
                           color: 'inherit' }}
                   title="Click to visit my GitHub">
-                    
+
               <h1 className="display-4 mb-4" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
-                <span style={{ background: '#fca311', 
-                              padding: '0 10px', 
-                              borderRadius: '5px' }}>
-                  Robert Frisco
-                </span>
+              <span style={{ background: '#fca311', 
+                            padding: '0 10px', 
+                            borderRadius: '5px' }}>
+              <i className="bi bi-github" style={{ marginRight: '10px' }}></i>Robert Frisco
+              </span>
+
               </h1>
             </Link>
             <ul className="nav">

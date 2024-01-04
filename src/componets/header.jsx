@@ -16,10 +16,17 @@ const Header = () => {
                           color: 'inherit' }}
                   title="Click to visit my GitHub">
 
-              <h1 className="display-4 mb-4" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
-              <span style={{ background: '#fca311', 
+              <h1 className="display-4 mb-4 " style={{ 
+                                          textShadow: '4px 4px 6px rgba(0,0,0,0.5)' 
+                                          
+                                        }}
+                                          >
+              <span style={{ background: '#fca311',
+                           
                             padding: '0 10px', 
-                            borderRadius: '5px' }}>
+                            borderRadius: '5px' 
+                          }}
+                            >
               <i className="bi bi-github" style={{ marginRight: '10px' }}></i>Robert Frisco
               </span>
 

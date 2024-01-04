@@ -27,11 +27,12 @@
     padding: 20px;
     margin-top: 20px; 
     border-radius: 10px;
-    
+    word-wrap: normal;
   }
   
   .about-me-text {
-    font-size: 18px; 
+    font-size: 18px;
+    font-weight: bold; 
   line-height: 1.6;
   word-wrap: normal;
     

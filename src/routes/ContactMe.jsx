@@ -1,15 +1,40 @@
-import { useState } from 'react';
+import  { useState } from 'react';
 import './ContactMe.css'; // Import your CSS file for ContactMe styling
 import mailPhoto from "../assets/images/email.jpg";
+import PropTypes from 'prop-types';
+
+const EmailLink = ({ emailAddress, subject, name, message }) => {
+  const bodyContent = `Name: ${name}\nEmail: ${emailAddress}\n\n${message}`;
+  const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${encodeURIComponent(bodyContent)}`;
+
+  const handleButtonClick = () => {
+    window.location.href = mailtoLink;
+  };
+
+  return (
+    <button onClick={handleButtonClick}>
+      Send Email
+    </button>
+  );
+};
+
+EmailLink.propTypes = {
+  emailAddress: PropTypes.string.isRequired,
+  subject: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+};
+
 
 const ContactMe = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [subject, setSubject] = useState(''); // Add subject state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch('http://localhost:3001/send-email', {
         method: 'POST',
@@ -17,9 +42,9 @@ const ContactMe = () => {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, subject }), // Include subject in the form data
       });
-  
+
       if (response.ok) {
         console.log('Email sent successfully!');
       } else {
@@ -28,13 +53,13 @@ const ContactMe = () => {
     } catch (error) {
       console.error('Error:', error);
     }
-  
+
     // Clear the form fields after submission
     setName('');
     setEmail('');
     setMessage('');
+    setSubject('');
   };
-  
 
   return (
     <div
@@ -46,15 +71,13 @@ const ContactMe = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        Height: '100vh',
+        height: '100vh',
         position: 'relative',
       }}
     >
       <div className="contact-container">
         <h2>Contact Me</h2>
-        
-          <form className="contact-form" action="http://localhost:3001/send-email" method="POST" onSubmit={handleSubmit}>
-
+        <form className="contact-form" action="http://localhost:3001/send-email" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input
@@ -76,6 +99,16 @@ const ContactMe = () => {
             />
           </div>
           <div className="form-group">
+            <label htmlFor="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
             <label htmlFor="message">Message:</label>
             <textarea
               id="message"
@@ -84,7 +117,13 @@ const ContactMe = () => {
               required
             />
           </div>
-          <button type="submit">Submit</button>
+          {/* Render the EmailLink component with dynamic subject and body */}
+          <EmailLink
+            emailAddress="neverclear@ymail.com"
+            subject={subject}
+            name={name}
+            message={message}
+          />
         </form>
       </div>
     </div>

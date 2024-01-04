@@ -1,7 +1,13 @@
 /* src/index.css */
 @import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+.display-4 {
+    font-family: 'Pacifico', cursive;
+  }
+span {
+    font-family: 'Pacifico', cursive;
+    font-size:45px;
+    margin-bottom: 5px;
+  }
 .anime-image {
     width: 100%; 
     height: auto; 

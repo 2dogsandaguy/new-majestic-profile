@@ -3,8 +3,8 @@ import './ContactMe.css'; // Import your CSS file for ContactMe styling
 import mailPhoto from "../assets/images/email.jpg";
 import PropTypes from 'prop-types';
 
-const EmailLink = ({ emailAddress, subject, name, message }) => {
-  const bodyContent = `Name: ${name}\nEmail: ${emailAddress}\n\n${message}`;
+const EmailLink = ({ emailAddress, subject, name, message, updatedEmail  }) => {
+  const bodyContent = `Name: ${name}\nEmail: ${updatedEmail}\n\n${message}`;
   const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${encodeURIComponent(bodyContent)}`;
 
   const handleButtonClick = () => {
@@ -23,6 +23,7 @@ EmailLink.propTypes = {
   subject: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
+  updatedEmail: PropTypes.string.isRequired,
 };
 
 
@@ -31,6 +32,11 @@ const ContactMe = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState(''); // Add subject state
+
+  // Update email state on input change
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -94,7 +100,7 @@ const ContactMe = () => {
               type="email"
               id="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
               required
             />
           </div>
@@ -123,6 +129,7 @@ const ContactMe = () => {
             subject={subject}
             name={name}
             message={message}
+            updatedEmail={email}
           />
         </form>
       </div>

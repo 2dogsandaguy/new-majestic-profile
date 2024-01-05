@@ -21,7 +21,7 @@ const Header = () => {
                                           
                                         }}
                                           >
-              <span style={{ background: '#fca311',
+              <span style={{ 
                            
                             padding: '0 10px', 
                             borderRadius: '5px' 

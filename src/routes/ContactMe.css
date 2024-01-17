@@ -7,7 +7,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
   }
-  
+  .my-email{
+    display: flex;
+    background: whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .my-email h1 {
+    padding-right: 15px;
+    
+  }
   .contact-form {
     display: flex;
     flex-direction: column;

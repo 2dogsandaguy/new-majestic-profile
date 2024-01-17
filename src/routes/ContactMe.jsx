@@ -1,20 +1,42 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import './ContactMe.css'; // Import your CSS file for ContactMe styling
 import mailPhoto from "../assets/images/email.jpg";
 import PropTypes from 'prop-types';
 
-const EmailLink = ({ emailAddress, subject, name, message, updatedEmail  }) => {
+const EmailLink = ({ emailAddress, subject, name, message, updatedEmail, showEmail  }) => {
+  const handleCopyClick = () => {
+    // Create a temporary input element to copy the email
+    const tempInput = document.createElement('input');
+    tempInput.value = emailAddress;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+
+    // You can also provide feedback to the user that the email has been copied, for example, show a tooltip or a small message.
+  };
+
   const bodyContent = `Name: ${name}\nEmail: ${updatedEmail}\n\n${message}`;
   const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${encodeURIComponent(bodyContent)}`;
 
-  const handleButtonClick = () => {
+  const handleSendClick = () => {
     window.location.href = mailtoLink;
   };
 
   return (
-    <button onClick={handleButtonClick}>
-      Send Email
-    </button>
+    <div className='my-email'>
+      {showEmail && <h1>Email: {emailAddress}</h1>}
+      {showEmail && (
+        <button onClick={handleCopyClick}>
+          Copy Email
+        </button>
+      )}
+      {name && emailAddress && subject && message && (
+        <button onClick={handleSendClick}>
+          Send Email
+        </button>
+      )}
+    </div>
   );
 };
 
@@ -24,6 +46,7 @@ EmailLink.propTypes = {
   name: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   updatedEmail: PropTypes.string.isRequired,
+  showEmail: PropTypes.bool.isRequired,
 };
 
 
@@ -32,6 +55,7 @@ const ContactMe = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState(''); // Add subject state
+  const [showEmail, setShowEmail] = useState(true);
 
   // Update email state on input change
   const handleEmailChange = (e) => {
@@ -65,6 +89,7 @@ const ContactMe = () => {
     setEmail('');
     setMessage('');
     setSubject('');
+    setShowEmail
   };
 
   return (
@@ -81,8 +106,17 @@ const ContactMe = () => {
         position: 'relative',
       }}
     >
+      <div className="create-container">
+      <div className='my-email'>
+        {/* Render the EmailLink component with dynamic subject and body */}
+        <EmailLink
+          emailAddress="neverclear@ymail.com"
+
+          showEmail={showEmail}
+        />
+      </div>
       <div className="contact-container">
-        <h2>Contact Me</h2>
+        <h2>Contact Me Form</h2>
         <form className="contact-form" action="http://localhost:3001/send-email" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
@@ -130,9 +164,11 @@ const ContactMe = () => {
             name={name}
             message={message}
             updatedEmail={email}
+            
           />
         </form>
       </div>
+    </div>
     </div>
   );
 };

@@ -1,5 +1,9 @@
 import './MyWork.css';
 
+/* import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css'; */
+
 import firstProject from '../assets/images/first-Project.png';
 import QuizApp from '../assets/images/quizApp.png';
 import Project2 from '../assets/images/project2.png';
@@ -41,6 +45,7 @@ const projects = [
 
 const MyWork = () => {
   return (
+    
     <div
       className="create-container"
       style={{

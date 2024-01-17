@@ -34,34 +34,33 @@ export default function Footer() {
             {/* <img className="img-fluid anime-image" style={{ width: '50%' }}src={animeImage} alt="Anime" /> */}
             <Slider {...settings}>
               <div>
-                <img className="img-fluid anime-image" src={me} alt="work img" />
+                <img className="img-fluid anime-image" src={me} alt="work image" />
               </div>
               <div>
-                <img className="img-fluid anime-image" src={eightyFeet} alt="work img" />
+                <img className="img-fluid anime-image" src={eightyFeet} alt="work image" />
               </div>
               <div>
-                <img className="img-fluid anime-image" src={finishGlass} alt="work img" />
+                <img className="img-fluid anime-image" src={finishGlass} alt="work image" />
               </div>
               <div>
-                <img className="img-fluid anime-image" src={glassInt} alt="work img" />
+                <img className="img-fluid anime-image" src={glassInt} alt="work image" />
               </div>
               <div>
-                <img className="img-fluid anime-image" src={macInt} alt="Anime 2" />
+                <img className="img-fluid anime-image" src={macInt} alt="work image" />
               </div>
               <div>
-                <img className="img-fluid anime-image" src={wind} alt="Anime 2" />
+                <img className="img-fluid anime-image" src={wind} alt="work image" />
               </div>
               <div>
-                <img className="img-fluid anime-image" src={texas} alt="Anime 2" />
+                <img className="img-fluid anime-image" src={texas} alt="work image" />
               </div>
               <div>
-                <img className="img-fluid anime-image" src={covidInt} alt="Anime 2" />
-                <img className="img-fluid anime-image" src={covidInt2} alt="Anime 2" />
+                <img className="img-fluid anime-image" src={covidInt} alt="work image" />
+                <img className="img-fluid anime-image" src={covidInt2} alt="work image" />
               </div>
               <div>
                 <img className="img-fluid anime-image" src={windCrane} alt="work img" />
               </div>
-              {/* Add more divs for additional images */}
             </Slider>
           </div>
         </div>

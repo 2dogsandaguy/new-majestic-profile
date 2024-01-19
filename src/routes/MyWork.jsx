@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'; */
 import firstProject from '../assets/images/first-Project.png';
 import QuizApp from '../assets/images/quizApp.png';
 import Project2 from '../assets/images/project2.png';
-import StudyTips from '../assets/images/studyTips.png';
+import fitness from '../assets/images/endor-fitness.png';
 import DayPlanner from '../assets/images/dayPlanner.png';
 import matrix from '../assets/images/giphy-matrix.gif';
 const projects = [
@@ -18,10 +18,10 @@ const projects = [
     description: 'The first project that I have done with APIs and others together.',
   },
   {
-    image: StudyTips,
-    title: 'Prework study guide',
-    link: 'https://2dogsandaguy.github.io/prework-study-guide/',
-    description: 'The work up to the program.',
+    image: fitness,
+    title: 'Endor Fitness',
+    link: 'https://next-level-fitness.onrender.com/',
+    description: 'final project created fitness site. ',
   },
   {
     image: Project2,

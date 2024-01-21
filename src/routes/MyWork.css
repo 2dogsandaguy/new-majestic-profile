@@ -79,6 +79,7 @@
     line-height: 25px;
 }
 
+
 @media only screen and (max-width: 875px) {
     .flex-row {
         flex-direction: column;

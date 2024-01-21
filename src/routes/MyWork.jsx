@@ -2,7 +2,6 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css'; */
 // Importing CSS file for styling
-// Importing CSS file for styling
 import './MyWork.css';
 
 // Importing images for projects
@@ -84,23 +83,23 @@ const MyWork = () => {
               <section className="projects" key={index}>
                 <img src={project.image} alt={project.title} width="200px" height="200px" />
                 <div className="info">
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <h3>{project.title}</h3>
-                  </a>
-                  <p>{project.description}</p>
-                  {project.github && (
-                     <p>
-                     <i className="bi bi-github"></i>
-                     <a href={project.github} target="_blank" rel="noopener noreferrer">
-                       {' '}
-                       GitHub
-                     </a>
-                   </p>
-                 )}
-                  {project.techStack && (
-                    <p>Tech Stack: {project.techStack.join(', ')}</p>
-                  )}
-                </div>
+  <a href={project.link} target="_blank" rel="noopener noreferrer">
+    <h3>{project.title}</h3>
+  </a>
+  <p>{project.description}</p>
+  {project.github && (
+    <p>
+      <i className="bi bi-github" style={{ fontSize: '20px', marginRight: '5px' }}></i>
+      <a href={project.github} target="_blank" rel="noopener noreferrer">
+        {' '}
+        GitHub
+      </a>
+    </p>
+  )}
+  {project.techStack && (
+    <p>Tech Stack: {project.techStack.join(', ')}</p>
+  )}
+</div>
               </section>
             ))}
           </section>

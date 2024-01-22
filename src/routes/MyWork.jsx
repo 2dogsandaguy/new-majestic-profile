@@ -28,7 +28,7 @@ const projects = [
     link: 'https://next-level-fitness.onrender.com/',
     github: 'https://github.com/2dogsandaguy/Code-war-2',
     description: 'Final project created fitness site.',
-    techStack: ['React', 'Node.js','Vite' ,'Passport', 'Bootstrap'],
+    techStack: ['React', 'Node.js','Vite' ,'Passport', 'Bootstrap','GraphQL'],
   },
   {
     image: Project2,

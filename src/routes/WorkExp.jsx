@@ -55,8 +55,15 @@ const WorkExp = () => {
 
       <section className="work-experience mt-4">
         <h3>Work Experience</h3>
+        <h4>Excel inc - Springfield, TN  </h4>
+        <p>Service Tech - Nashville area Plus | February 2024 - Present </p>
+        <ul>
+          <li>Build cranes wire the systems up to work.</li>
+          <li>Test the cranes and all the functions are working.</li>
+          <li>Service side go to sites and repair or get the crane functional locate the problem with it.</li>
+        </ul>
         <h4>PCS CRANE SERVICES - Oakland, NJ</h4>
-        <p>Team Leader - Various Locations, Tri-State Area | February 2020 - Present</p>
+        <p>Team Leader - Various Locations, Tri-State Area | February 2020 - January 2024  </p>
         <ul>
           <li>Led teams in successful crane installation projects, demonstrating leadership and project management skills.</li>
           <li>Multi-talented professional, serving as a fabricator, service technician, and assisting in managerial tasks.</li>
